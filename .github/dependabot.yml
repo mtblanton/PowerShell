@@ -1,0 +1,50 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  labels:
+  - CL-BuildPackaging
+  ignore:
+  - dependency-name: System.ServiceModel.Primitives
+    versions:
+    - 4.8.0
+- package-ecosystem: nuget
+  directory: "/tools/packaging/projects/reference/Microsoft.PowerShell.Commands.Utility"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  labels:
+  - CL-BuildPackaging
+  ignore:
+  - dependency-name: Newtonsoft.Json
+    versions:
+    - 12.0.3
+- package-ecosystem: nuget
+  directory: "/tools/packaging/projects/reference/System.Management.Automation"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  labels:
+  - CL-BuildPackaging
+- package-ecosystem: nuget
+  directory: "/test/tools/Modules"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  labels:
+  - CL-BuildPackaging
+- package-ecosystem: nuget
+  directory: "/src/Modules"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  labels:
+  - CL-BuildPackaging
